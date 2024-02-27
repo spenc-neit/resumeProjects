@@ -1,0 +1,31 @@
+﻿body {
+}
+
+#gridviewDiv{
+    width:75%;
+}
+
+.gridview{
+    width:100%;
+}
+
+td:nth-child(5){
+    text-align:center;
+}
+
+table *{
+    border:none;
+}
+
+tr{
+    border-bottom:1px solid black;
+}
+
+.newStudentButton{
+    width:200px;
+    height:30px;
+}
+
+.formlabel{
+    margin-top:20px;
+}

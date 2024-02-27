@@ -1,0 +1,68 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.login {
+    background-color: #F9F9F9;
+}
+
+.centered {
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.start {
+    margin-top: 5px;
+    display: flex;
+    justify-self:start;
+    justify-content: center;
+    margin-right: 250px;
+    
+}
+
+.warning {
+    color: red;
+}
+
+
+#txtConfirm {
+    width: 350px;
+    height: 25px;
+    border-radius: 50px;
+}
+
+#txtPassword {
+    width: 350px;
+    height: 25px;
+    border-radius: 50px;
+}
+
+#neitlogo {
+    margin-top:200px;
+    width:100px;
+    height:100px;
+}
+
+#lblCPW {
+    font-size:50px;
+    color: #224875;
+}
+
+#btnSubmit {
+    background-color: #FFC700;
+    color: black;
+    margin-top: 5px;
+    font-size: 20px;
+    text-decoration: solid;
+    width: 200px;
+    height: 30px;
+    border: 0px;
+    border-radius: 10px;
+}
+
+#cmpw {
+    margin-left:25px;
+}

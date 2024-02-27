@@ -1,0 +1,460 @@
+﻿/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+table{
+    z-index:0;
+}
+
+@font-face {
+    font-family: inter;
+    src: url(../fonts/Inter-reg.ttf);
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+* {
+    font-family: inter;
+}
+
+/* Set widths on the form inputs since otherwise they're 100% wide */
+/*input,
+select,
+textarea {
+    max-width: 280px;
+}*/
+
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+    .jumbotron {
+        margin-top: 20px;
+    }
+
+    .body-content {
+        padding: 0;
+    }
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #061745; /* For browsers that do not support gradients */
+    background-image: linear-gradient(#0684F9, #061745);
+    width: 115px;
+}
+
+.sidebar-header {
+    text-align: center;
+    color: white;
+}
+
+.nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+.nav-item {
+    margin: 10px 0;
+    color: white;
+}
+
+.nav-link {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-item:hover {
+    background-image: linear-gradient(#0684F9, #061745);
+    color: #fff;
+}
+
+.rounded {
+    border-radius: 50%;
+    height: 65px;
+    width: 65px;
+}
+
+.nvbar {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.MonitorForm {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 500px;
+    height: 100%; /*copied from figma*/
+    background: #D6D6D6;
+    border-top-left-radius: 49px;
+    border-bottom-left-radius: 49px;
+    padding-left: 90px; /*not sure what */
+}
+
+.avabar {
+    border-radius: 5%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 90px;
+    z-index: 1000;
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #D6D6D6; /*  #D6D6D6; */
+    width: 400px;
+    border: 1px solid black;
+}
+
+.avacontent {
+    text-align: center;
+}
+
+.btnimg2 {
+    margin-top: 10px;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    margin-left: -10px;
+    position: center;
+    border: solid black 2px;
+}
+
+.btnimg3 {
+    margin-top: 10px;
+    margin-left: -120px;
+    margin-bottom: 30px;
+    height: 85px;
+    width: 85px;
+    position: center;
+}
+
+#ImageButton3 {
+    width: 40px;
+    height: 40px;
+}
+
+.uname {
+    text-align: center;
+}
+
+#cplink {
+    margin-top: 20px;
+    text-decoration: none;
+    font-size: 15px;
+    position: center;
+}
+
+#lglink {
+    text-decoration: none;
+    font-size: 30px;
+    color: black;
+    margin-right: 3px;
+    text-align: center;
+}
+
+.logout1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.hidden {
+    width: 0;
+    padding: 0;
+    min-width: 0;
+    transition: all 1s;
+}
+
+.warning {
+    color: red;
+    display: block;
+}
+
+.gone {
+    display: none;
+}
+
+
+.stTable {
+    width: 900px;
+    padding-left: 22px;
+}
+
+tr {
+    border-bottom: 1px solid black;
+    height: 40px;
+}
+
+td:first-child, th:first-child {
+    padding-left: 22px;
+}
+
+td:last-child {
+    text-align: center;
+}
+
+tr:last-child {
+    border: none;
+}
+
+.formBottom{
+    display:flex;
+    justify-content:space-between;
+}
+
+
+.button {
+    border-radius: 12px;
+    background-color: #ffbb00;
+    border: 0;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#headerButton {
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+    margin-bottom: 10px;
+    margin-top: 30px;
+}
+
+.xbutton {
+    width: 25px;
+}
+
+.container {
+    margin-left: 195px;
+}
+
+h2, #formHeader {
+    font-size: 40px;
+}
+
+
+.formfield {
+    width: 75%;
+    height: 30px;
+}
+
+#formButtons {
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+    margin-top: 20px;
+}
+
+.formButtons {
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+    margin-top: 20px;
+}
+
+.MonitorForm label {
+    font-size: 20px;
+}
+
+.miniTable td:first-child {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+/* DASHBOARD STUDENT VIEW*/
+.dbgrid {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    padding-right: 100px;
+}
+
+@media (max-width: 900px) {
+    .dbgrid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.labcard {
+    width: 420px;
+    height: 290px;
+    background: linear-gradient(180deg, rgba(30, 157, 249, 0) 0%, #0684F9 100%);
+    border: 1px solid #000000;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 42px;
+    color: black;
+}
+
+.htags {
+    display: flex;
+    justify-content: space-between;
+}
+
+.lbn {
+    margin-left: 25px;
+}
+
+.rn {
+    margin-right: 35px;
+}
+
+.cardcontent {
+    margin-top: 2px;
+    margin-left: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.imgbk {
+    display: flex;
+    margin-right: -15px;
+    margin-top: 50px;
+    height: 200px;
+    width: 200px;
+}
+
+
+
+.footer {
+    position: fixed;
+    bottom: 0;
+}
+
+
+.labs-header {
+    display: flex;
+    align-items: center;
+}
+
+    .labs-header h2 {
+        margin-right: 10px;
+    }
+
+
+/* REPORT.CSS */
+
+.search {
+    display: flex;
+    margin-right: 100px;
+    justify-content: left;
+    height: 100px;
+}
+
+#selectbox {
+    display: flex;
+    margin-right: 50px;
+    height: 30px;
+}
+
+#datebox {
+    display: flex;
+    margin-right: 50px;
+    height: 30px;
+}
+
+#filetbox {
+    display: flex;
+    margin-right: 50px;
+    height: 30px;
+}
+
+.stday {
+    display: flex;
+    margin-right: 25px;
+}
+
+.endday {
+    display: flex;
+    margin-left: 25px;
+}
+
+#lgChart {
+    background-color: black;
+    border-width: 0;
+    height: 500px;
+    width: 500px;
+    border: solid black 1px;
+    font-palette: none;
+}
+
+
+
+
+/* Основные стили для графика */
+.chart-container {
+    width: 100%;
+    height: 400px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+/* Стили для заголовка графика */
+.chart-title {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Стили для подписей осей графика */
+.chart-axis-label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Стили для меток на оси X */
+.chart-x-axis-label {
+    font-size: 12px;
+    font-weight: normal;
+    color: #333;
+}
+
+/* Стили для меток на оси Y */
+.chart-y-axis-label {
+    font-size: 12px;
+    font-weight: normal;
+    color: #333;
+}
+
+/* Стили для легенды графика */
+.chart-legend {
+    font-size: 12px;
+    font-weight: normal;
+    color: #333;
+}
+
+.tiger {
+    position: fixed;
+    right: 0;
+    top: 10%;
+    z-index: 0;
+}
+
+.MonitorForm {
+    z-index: 1;
+}

@@ -1,0 +1,30 @@
+﻿.labs-header{
+    width:75%;
+    display:flex;
+    justify-content:space-between;
+}
+
+table *{
+    border:none;
+}
+
+td:nth-child(3) {
+    text-align: center;
+}
+
+tr{
+    border-bottom:1px solid black;
+}
+
+tr:last-child{
+    border:none;
+}
+
+.tableInput{
+    width:100%;
+    border:1px solid black;
+}
+
+.formlabel {
+    margin-top: 20px;
+}

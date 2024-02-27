@@ -1,0 +1,29 @@
+﻿body {
+}
+
+.calAndButton{
+    width:75%;
+    text-align:right;
+}
+
+.historyTable{
+    width:75%;
+}
+
+table, table * {
+    border: none;
+}
+
+tr {
+    border-bottom: 1px solid black;
+}
+
+.buttonSearch{
+    width:100px;
+    height:30px;
+    margin-left:10px;
+}
+
+.formlabel {
+    margin-top: 20px;
+}

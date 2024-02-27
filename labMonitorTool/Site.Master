@@ -1,0 +1,145 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="labMonitor.SiteMaster" %>
+<%@ Register Assembly="System.Web.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Namespace="System.Web.UI.DataVisualization.Charting" TagPrefix="asp" %>
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - Lab Monitoring Tool</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+   
+
+
+</head>
+<body>
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+
+
+        <div class="avabar" runat="server" id="avabar" visible="false"> <%-- Avatar Bar Start --%>
+
+            <div class="avacontent">
+                <div class="userfname">  <%-- H2, Name of user --%>
+                    <h2 class="uname" id="userName" runat="server">[Name]</h2>
+                </div>
+
+                <div class="">
+                    <asp:Image ID="avaImage" class="btnimg2" runat="server" ImageAlign="Bottom" ImageUrl="~/images/avatars/avatar.jpg" />
+                </div>
+                
+                <div>
+                    <a id="cplink" href="ChangePassword.aspx">Change Password</a>
+                </div>
+
+                <div class="logout1">
+                    <a id="lglink" href="Login.aspx">Logout</a> <asp:ImageButton  ID="ImageButton3" runat="server" ImageUrl="\images\logout logo.png" OnClick="LogOut"/>    
+                </div>
+            </div>
+        </div> <%-- END --%>
+
+
+       <div class="sidebar">
+
+    <div class="sidebar-header">
+        <asp:ImageButton  ID="Logo"  runat="server" ImageAlign="Bottom" ImageUrl="images/logo.png" OnClick="GoHome" /> <%-- Opens Avatar Bar --%>
+    </div>
+
+        <div class="nvbar"  id="nvbar" runat="server">
+            <ul class="nav">
+                <%--this will always show--%>
+                <li class="nav-item">
+                    <asp:ImageButton id="avatar" runat="server"
+                       AlternateText="Avatar"
+                       ImageUrl="images/avatar.png"
+                       class="rounded" BorderColor="White" OnClick="ShowHideBar"/>
+                    <br />
+                    <asp:Label ID="lblUserName" runat="server">Name</asp:Label>
+                </li>
+                <a href="MonitorsEdit.aspx"><li class="nav-item" runat="server" id="monitor" visible="false">
+                     <asp:ImageButton  ID="addeditbtn"  runat="server" ImageAlign="Bottom" ImageUrl="~/images/NavIcons/monitors icon.png" OnClick="MonitorsEdit" />
+                     <asp:Label  OnClick="Monitors" runat="server">Add/Edit Monitors</asp:Label>
+                </li></a>
+
+                <a href="Reports.aspx"><li class="nav-item" runat="server" id="reports" visible="false">
+                    <asp:ImageButton  ID="reportsbtn"  runat="server" ImageAlign="Bottom" ImageUrl="~/images/NavIcons/report icon.png" OnClick="Reports" />
+                    <asp:Label runat="server">Reports</asp:Label>
+                </li></a>
+
+                <a href="LogView.aspx"><li class="nav-item" runat="server" id="logHistory" visible="false">
+                    <asp:ImageButton  ID="loghistorybtn"  runat="server" ImageAlign="Bottom" ImageUrl="~/images/NavIcons/logs icon.png" OnClick="LogHistory" />
+                    <asp:Label runat="server">Log History</asp:Label>
+                </li></a>
+
+                <a href="Calendar.aspx"><li class="nav-item" runat="server" id="schedule" visible="false">
+                    <asp:ImageButton  ID="schedulebtn"  runat="server" ImageAlign="Bottom" ImageUrl="~/images/NavIcons/schedule icon.png" OnClick="Schedule" />
+                    <asp:Label runat="server">Schedule</asp:Label>
+                </li></a>
+
+                <a href="Admin.aspx"><li class="nav-item" runat="server" id="admin" visible="false">
+                    <asp:ImageButton  ID="adminbtn"  runat="server" ImageAlign="Bottom" ImageUrl="~/images/NavIcons/admin icon.png" OnClick="Admin" />
+                    <asp:Label runat="server">Admin</asp:Label>
+                </li></a>
+
+                <a href="PasswordMgr.aspx"><li class="nav-item" runat="server" id="passwordmgr" visible="false">
+                    <asp:ImageButton  ID="passwdbtn"  runat="server" ImageAlign="Bottom" ImageUrl="~/images/NavIcons/password.png" OnClick="PasswordMgr" />
+                    <asp:Label runat="server">Password Manager</asp:Label>
+                </li></a>
+
+            </ul>
+        </div>
+    </div>
+
+            
+       <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            
+           <div class="hideme" id="hideme">
+    </div>
+               
+
+           
+           
+
+           <div class="footer">
+             
+                <footer>
+                    <p>&copy; <%: DateTime.Now.Year %> Ryan | Spencer | Farid</p>
+                </footer>
+            </div>
+       
+       </div>
+ 
+
+</form>
+
+
+</body>
+</html>

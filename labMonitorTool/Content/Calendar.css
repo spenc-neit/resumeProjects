@@ -1,0 +1,29 @@
+﻿body {
+}
+
+.schedGrid td:first-child{
+    padding-left:0px;
+}
+
+.schedGrid *{
+    text-align:center;
+}
+
+.schedGrid{
+    width:80%;
+}
+
+tr:first-child td{
+    font-weight:bold;
+}
+
+.btnBelowTable{
+    width:100px;
+    height:30px;
+}
+
+.divBelowTable{
+    width:80%;
+    text-align:right;
+    margin-top: 15px;
+}
