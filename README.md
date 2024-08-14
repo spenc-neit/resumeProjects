@@ -7,7 +7,7 @@
  
  monsterHunterApp is a React Native app, written and tested by myself using Expo.
  
- Lastly, I have decided to upload both my [technical document about the Nintendo Wii](https://docs.google.com/document/d/11PIcb0AxR7fnzMw7Ar1xthuwpVYzClyZ/edit?usp=sharing&ouid=117746708171949207126&rtpof=true&sd=true) and my [research paper surrounding the Police](https://drive.google.com/file/d/1TYYLJtW64tNmIa2id3QhggLcXOtmQJGC/view?usp=sharing) to Google Docs.
+ Lastly, I have decided to upload both my [technical document about the Nintendo Wii](https://docs.google.com/document/d/11PIcb0AxR7fnzMw7Ar1xthuwpVYzClyZ/edit?usp=sharing&ouid=117746708171949207126&rtpof=true&sd=true) and my [research paper surrounding the Police](https://drive.google.com/file/d/1IefA46PaiU19RH2fKhNhytVEomkpZJia/view?usp=sharing) to Google Docs.
 
 ## Thank you!
  If you have any questions about these projects, please don't hesitate to reach out.
